@@ -6,10 +6,10 @@ pd.set_option('display.max_columns', None)
 
 # Preprocessing
 # ==============================================================================================================================
-nba_df = pd.read_csv('games.csv')
+nba_df = pd.read_csv('../datasets/games.csv')
 nba_df['GAME_DATE_EST'] = pd.to_datetime(nba_df['GAME_DATE_EST'])
 nba_df.drop(['GAME_ID', 'GAME_STATUS_TEXT', 'TEAM_ID_home', 'TEAM_ID_away'], axis=1, inplace=True)
-team_df = pd.read_csv('teams.csv')
+team_df = pd.read_csv('../datasets/teams.csv')
 
 # Change IDs in the NBA game df to actual name
 ids = nba_df['HOME_TEAM_ID'].unique()
