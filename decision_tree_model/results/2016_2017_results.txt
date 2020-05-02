@@ -1,0 +1,84 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     2016_2017_training_data
+Instances:    1405
+Attributes:   23
+              FG
+              FGA
+              FG%
+              3P
+              3PA
+              3P%
+              2P
+              2PA
+              2P%
+              FT
+              FTA
+              FT%
+              ORB
+              DRB
+              TRB
+              AST
+              STL
+              BLK
+              TOV
+              PF
+              PTS
+              W
+              Top_Team_Won
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+W <= -6
+|   W <= -19
+|   |   FG% <= -0.01: False (146.0/30.0)
+|   |   FG% > -0.01
+|   |   |   3P% <= -0.02: False (11.0/1.0)
+|   |   |   3P% > -0.02
+|   |   |   |   3P <= -3.1: False (6.0/1.0)
+|   |   |   |   3P > -3.1: True (10.0/1.0)
+|   W > -19
+|   |   FT% <= 0.02: False (263.0/108.0)
+|   |   FT% > 0.02: True (101.0/42.0)
+W > -6: True (868.0/260.0)
+
+Number of Leaves  : 	7
+
+Size of the tree : 	13
+
+
+Time taken to build model: 0.02 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          13               86.6667 %
+Incorrectly Classified Instances         2               13.3333 %
+Kappa statistic                          0     
+Mean absolute error                      0.353 
+Root mean squared error                  0.3784
+Relative absolute error                 80.0727 %
+Root relative squared error             85.1769 %
+Total Number of Instances               15     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.867      1.000    0.929      ?        0.500     0.867     True
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.133     False
+Weighted Avg.    0.867    0.867    ?          0.867    ?          ?        0.500     0.769     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 13  0 |  a = True
+  2  0 |  b = False
+

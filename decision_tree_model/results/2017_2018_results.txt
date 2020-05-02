@@ -1,0 +1,142 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.trees.J48 -- -C 0.25 -M 2
+Relation:     2017_2018_training_data
+Instances:    1382
+Attributes:   23
+              FG
+              FGA
+              FG%
+              3P
+              3PA
+              3P%
+              2P
+              2PA
+              2P%
+              FT
+              FTA
+              FT%
+              ORB
+              DRB
+              TRB
+              AST
+              STL
+              BLK
+              TOV
+              PF
+              PTS
+              W
+              Top_Team_Won
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+J48 pruned tree
+------------------
+
+W <= -3
+|   W <= -27
+|   |   DRB <= -3.9
+|   |   |   FG <= -3.4: True (2.0)
+|   |   |   FG > -3.4: False (3.0/1.0)
+|   |   DRB > -3.9: False (73.0/7.0)
+|   W > -27
+|   |   W <= -12
+|   |   |   FT% <= -0.07: False (16.0/1.0)
+|   |   |   FT% > -0.07
+|   |   |   |   AST <= 0.3
+|   |   |   |   |   2PA <= -2.4
+|   |   |   |   |   |   2P% <= -0.05: True (4.0)
+|   |   |   |   |   |   2P% > -0.05
+|   |   |   |   |   |   |   DRB <= -0.9: False (14.0/2.0)
+|   |   |   |   |   |   |   DRB > -0.9: True (22.0/8.0)
+|   |   |   |   |   2PA > -2.4
+|   |   |   |   |   |   3PA <= -5.7
+|   |   |   |   |   |   |   TRB <= 0.8
+|   |   |   |   |   |   |   |   TRB <= -3
+|   |   |   |   |   |   |   |   |   2P% <= -0.03: True (5.0/2.0)
+|   |   |   |   |   |   |   |   |   2P% > -0.03: False (3.0)
+|   |   |   |   |   |   |   |   TRB > -3: True (7.0)
+|   |   |   |   |   |   |   TRB > 0.8: False (9.0/1.0)
+|   |   |   |   |   |   3PA > -5.7: False (91.0/13.0)
+|   |   |   |   AST > 0.3
+|   |   |   |   |   2P% <= 0.01: False (102.0/46.0)
+|   |   |   |   |   2P% > 0.01: True (7.0/1.0)
+|   |   W > -12
+|   |   |   2P% <= -0.04
+|   |   |   |   STL <= -0.7: True (9.0)
+|   |   |   |   STL > -0.7
+|   |   |   |   |   3P <= 0.4: True (23.0/8.0)
+|   |   |   |   |   3P > 0.4: False (3.0)
+|   |   |   2P% > -0.04
+|   |   |   |   FG% <= 0.02: False (177.0/78.0)
+|   |   |   |   FG% > 0.02
+|   |   |   |   |   FT% <= 0.02: True (11.0/1.0)
+|   |   |   |   |   FT% > 0.02: False (6.0/2.0)
+W > -3: True (795.0/211.0)
+
+Number of Leaves  : 	21
+
+Size of the tree : 	41
+
+Attribute mappings:
+
+Model attributes        	    Incoming attributes
+------------------------	    ----------------
+(numeric) FG            	--> 1 (numeric) FG
+(numeric) FGA           	--> 2 (numeric) FGA
+(numeric) FG%           	--> 3 (numeric) FG%
+(numeric) 3P            	--> 4 (numeric) 3P
+(numeric) 3PA           	--> 5 (numeric) 3PA
+(numeric) 3P%           	--> 6 (numeric) 3P%
+(numeric) 2P            	--> 7 (numeric) 2P
+(numeric) 2PA           	--> 8 (numeric) 2PA
+(numeric) 2P%           	--> 9 (numeric) 2P%
+(numeric) FT            	--> 10 (numeric) FT
+(numeric) FTA           	--> 11 (numeric) FTA
+(numeric) FT%           	--> 12 (numeric) FT%
+(numeric) ORB           	--> 13 (numeric) ORB
+(numeric) DRB           	--> 14 (numeric) DRB
+(numeric) TRB           	--> 15 (numeric) TRB
+(numeric) AST           	--> 16 (numeric) AST
+(numeric) STL           	--> 17 (numeric) STL
+(numeric) BLK           	--> 18 (numeric) BLK
+(numeric) TOV           	--> 19 (numeric) TOV
+(numeric) PF            	--> 20 (numeric) PF
+(numeric) PTS           	--> 21 (numeric) PTS
+(numeric) W             	--> 22 (numeric) W
+(nominal) Top_Team_Won  	--> 23 (nominal) Top_Team_Won
+
+
+Time taken to build model: 0.05 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          10               66.6667 %
+Incorrectly Classified Instances         5               33.3333 %
+Kappa statistic                          0     
+Mean absolute error                      0.4218
+Root mean squared error                  0.4763
+Relative absolute error                 89.2623 %
+Root relative squared error             99.4551 %
+Total Number of Instances               15     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.333     False
+                 1.000    1.000    0.667      1.000    0.800      ?        0.500     0.667     True
+Weighted Avg.    0.667    0.667    ?          0.667    ?          ?        0.500     0.556     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+  0  5 |  a = False
+  0 10 |  b = True
+
