@@ -1,10 +1,10 @@
 Focusing on 5 NBA seasons:
 
-2014 - 2015
-2015 - 2016
-2016 - 2017
-2017 - 2018
-2018 - 2019
+- 2014 - 2015
+- 2015 - 2016
+- 2016 - 2017
+- 2017 - 2018
+- 2018 - 2019
 
 The training data was created by subtracting the away team averages from the home team averages in the following categories (left to right): FG, FGA, FG%, 3P, 3PA, 3P%, 2P, 2PA, 2P%, FT, FTA, FT%, ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS, W
 
