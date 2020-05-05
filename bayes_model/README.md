@@ -16,4 +16,4 @@ The notation of top_team refers to the home team in the training data, and in th
 
 NOTE: Training Data and Testing Data are the same files from the Decision Tree Model that were used for testing in the WEKA Software.
 
-The results come from using this same data from the previous model but by using a Bayesian Classifier from the WEKA Software.
+The results come from using the Bayesian Classifier from the WEKA Software.
