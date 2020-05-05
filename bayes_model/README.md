@@ -14,6 +14,6 @@ The testing data was made by observing playoff match ups for each of these seaso
 
 The notation of top_team refers to the home team in the training data, and in the testing data it refers to the team with the lower seed in the playoffs of that season.
 
-NOTE: Training Data and Testing Data are the same files from the Decision Tree Model that were used for testing in the WEKA Software.
+NOTE: Training Data and Testing Data are the same files from the Decision Tree Model
 
 The results come from using the Bayesian Classifier from the WEKA Software.
