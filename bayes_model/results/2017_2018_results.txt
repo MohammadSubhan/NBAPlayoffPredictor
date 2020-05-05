@@ -1,0 +1,126 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.bayes.BayesNet -- -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     2017_2018_training_data
+Instances:    1382
+Attributes:   23
+              FG
+              FGA
+              FG%
+              3P
+              3PA
+              3P%
+              2P
+              2PA
+              2P%
+              FT
+              FTA
+              FT%
+              ORB
+              DRB
+              TRB
+              AST
+              STL
+              BLK
+              TOV
+              PF
+              PTS
+              W
+              Top_Team_Won
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+Bayes Network Classifier
+not using ADTree
+#attributes=23 #classindex=22
+Network structure (nodes followed by parents)
+FG(2): Top_Team_Won 
+FGA(1): Top_Team_Won 
+FG%(2): Top_Team_Won 
+3P(2): Top_Team_Won 
+3PA(1): Top_Team_Won 
+3P%(2): Top_Team_Won 
+2P(1): Top_Team_Won 
+2PA(2): Top_Team_Won 
+2P%(2): Top_Team_Won 
+FT(2): Top_Team_Won 
+FTA(1): Top_Team_Won 
+FT%(1): Top_Team_Won 
+ORB(1): Top_Team_Won 
+DRB(2): Top_Team_Won 
+TRB(1): Top_Team_Won 
+AST(2): Top_Team_Won 
+STL(2): Top_Team_Won 
+BLK(2): Top_Team_Won 
+TOV(1): Top_Team_Won 
+PF(1): Top_Team_Won 
+PTS(2): Top_Team_Won 
+W(4): Top_Team_Won 
+Top_Team_Won(2): 
+LogScore Bayes: -12162.302634300459
+LogScore BDeu: -12193.349137026571
+LogScore MDL: -12196.48107372818
+LogScore ENTROPY: -12084.3961251611
+LogScore AIC: -12115.3961251611
+
+Attribute mappings:
+
+Model attributes        	    Incoming attributes
+------------------------	    ----------------
+(numeric) FG            	--> 1 (numeric) FG
+(numeric) FGA           	--> 2 (numeric) FGA
+(numeric) FG%           	--> 3 (numeric) FG%
+(numeric) 3P            	--> 4 (numeric) 3P
+(numeric) 3PA           	--> 5 (numeric) 3PA
+(numeric) 3P%           	--> 6 (numeric) 3P%
+(numeric) 2P            	--> 7 (numeric) 2P
+(numeric) 2PA           	--> 8 (numeric) 2PA
+(numeric) 2P%           	--> 9 (numeric) 2P%
+(numeric) FT            	--> 10 (numeric) FT
+(numeric) FTA           	--> 11 (numeric) FTA
+(numeric) FT%           	--> 12 (numeric) FT%
+(numeric) ORB           	--> 13 (numeric) ORB
+(numeric) DRB           	--> 14 (numeric) DRB
+(numeric) TRB           	--> 15 (numeric) TRB
+(numeric) AST           	--> 16 (numeric) AST
+(numeric) STL           	--> 17 (numeric) STL
+(numeric) BLK           	--> 18 (numeric) BLK
+(numeric) TOV           	--> 19 (numeric) TOV
+(numeric) PF            	--> 20 (numeric) PF
+(numeric) PTS           	--> 21 (numeric) PTS
+(numeric) W             	--> 22 (numeric) W
+(nominal) Top_Team_Won  	--> 23 (nominal) Top_Team_Won
+
+
+Time taken to build model: 0.05 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          11               73.3333 %
+Incorrectly Classified Instances         4               26.6667 %
+Kappa statistic                          0.4   
+Mean absolute error                      0.3078
+Root mean squared error                  0.4576
+Relative absolute error                 65.1455 %
+Root relative squared error             95.5644 %
+Total Number of Instances               15     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.600    0.200    0.600      0.600    0.600      0.400    0.820     0.693     False
+                 0.800    0.400    0.800      0.800    0.800      0.400    0.820     0.926     True
+Weighted Avg.    0.733    0.333    0.733      0.733    0.733      0.400    0.820     0.848     
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 3 2 | a = False
+ 2 8 | b = True

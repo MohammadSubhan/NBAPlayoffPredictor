@@ -1,0 +1,96 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     2015_2016_training_data
+Instances:    1416
+Attributes:   23
+              FG
+              FGA
+              FG%
+              3P
+              3PA
+              3P%
+              2P
+              2PA
+              2P%
+              FT
+              FTA
+              FT%
+              ORB
+              DRB
+              TRB
+              AST
+              STL
+              BLK
+              TOV
+              PF
+              PTS
+              W
+              Top_Team_Won
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=23 #classindex=22
+Network structure (nodes followed by parents)
+FG(3): Top_Team_Won 
+FGA(1): Top_Team_Won 
+FG%(4): Top_Team_Won 
+3P(2): Top_Team_Won 
+3PA(1): Top_Team_Won 
+3P%(3): Top_Team_Won 
+2P(1): Top_Team_Won 
+2PA(1): Top_Team_Won 
+2P%(2): Top_Team_Won 
+FT(1): Top_Team_Won 
+FTA(1): Top_Team_Won 
+FT%(1): Top_Team_Won 
+ORB(1): Top_Team_Won 
+DRB(2): Top_Team_Won 
+TRB(2): Top_Team_Won 
+AST(3): Top_Team_Won 
+STL(1): Top_Team_Won 
+BLK(2): Top_Team_Won 
+TOV(2): Top_Team_Won 
+PF(2): Top_Team_Won 
+PTS(3): Top_Team_Won 
+W(4): Top_Team_Won 
+Top_Team_Won(2): 
+LogScore Bayes: -14651.973396457135
+LogScore BDeu: -14706.781760775419
+LogScore MDL: -14711.52362973369
+LogScore ENTROPY: -14555.528417337237
+LogScore AIC: -14598.528417337237
+
+
+Time taken to build model: 0.02 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          13               86.6667 %
+Incorrectly Classified Instances         2               13.3333 %
+Kappa statistic                          0.4444
+Mean absolute error                      0.2359
+Root mean squared error                  0.3785
+Relative absolute error                 53.1587 %
+Root relative squared error             84.1046 %
+Total Number of Instances               15     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.333    0.000    1.000      0.333    0.500      0.535    0.694     0.583     False
+                 1.000    0.667    0.857      1.000    0.923      0.535    0.694     0.897     True
+Weighted Avg.    0.867    0.533    0.886      0.867    0.838      0.535    0.694     0.834     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+  1  2 |  a = False
+  0 12 |  b = True
