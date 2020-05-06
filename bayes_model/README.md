@@ -18,8 +18,8 @@ NOTE: Training Data and Testing Data are the same files from the Decision Tree M
 
 The results come from using the Bayesian Classifier from the WEKA Software.
 
-RESULTS
--------
+Results
+
 Season 14-15: total_games = 15, accuracy = 0.733
 Season 15-16: total_games = 15, accuracy = 0.866
 Season 16-17: total_games = 15, accuracy = 0.800
