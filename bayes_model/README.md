@@ -17,3 +17,13 @@ The notation of top_team refers to the home team in the training data, and in th
 NOTE: Training Data and Testing Data are the same files from the Decision Tree Model.
 
 The results come from using the Bayesian Classifier from the WEKA Software.
+
+RESULTS
+-------
+Season 14-15: total_games = 15, accuracy = 0.733
+Season 15-16: total_games = 15, accuracy = 0.866
+Season 16-17: total_games = 15, accuracy = 0.800
+Season 17-18: total_games = 15, accuracy = 0.733
+Season 18-19: total_games = 15, accuracy = 0.800
+Total_games = 75
+Average_accuracy = 78.664
