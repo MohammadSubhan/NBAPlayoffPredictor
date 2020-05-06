@@ -26,4 +26,4 @@ Results
 - Season 17-18: total_games = 15, accuracy = 0.733
 - Season 18-19: total_games = 15, accuracy = 0.800
 - Total_games = 75
-= Average_accuracy = 78.664
+- Average_accuracy = 78.664
