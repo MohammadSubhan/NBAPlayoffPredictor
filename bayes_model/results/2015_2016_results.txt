@@ -1,6 +1,6 @@
 === Run information ===
 
-Scheme:       weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Scheme:       weka.classifiers.bayes.NaiveBayes 
 Relation:     2015_2016_training_data
 Instances:    1416
 Attributes:   23
@@ -31,41 +31,147 @@ Test mode:    user supplied test set:  size unknown (reading incrementally)
 
 === Classifier model (full training set) ===
 
-Bayes Network Classifier
-not using ADTree
-#attributes=23 #classindex=22
-Network structure (nodes followed by parents)
-FG(3): Top_Team_Won 
-FGA(1): Top_Team_Won 
-FG%(4): Top_Team_Won 
-3P(2): Top_Team_Won 
-3PA(1): Top_Team_Won 
-3P%(3): Top_Team_Won 
-2P(1): Top_Team_Won 
-2PA(1): Top_Team_Won 
-2P%(2): Top_Team_Won 
-FT(1): Top_Team_Won 
-FTA(1): Top_Team_Won 
-FT%(1): Top_Team_Won 
-ORB(1): Top_Team_Won 
-DRB(2): Top_Team_Won 
-TRB(2): Top_Team_Won 
-AST(3): Top_Team_Won 
-STL(1): Top_Team_Won 
-BLK(2): Top_Team_Won 
-TOV(2): Top_Team_Won 
-PF(2): Top_Team_Won 
-PTS(3): Top_Team_Won 
-W(4): Top_Team_Won 
-Top_Team_Won(2): 
-LogScore Bayes: -14651.973396457135
-LogScore BDeu: -14706.781760775419
-LogScore MDL: -14711.52362973369
-LogScore ENTROPY: -14555.528417337237
-LogScore AIC: -14598.528417337237
+Naive Bayes Classifier
+
+                 Class
+Attribute        False    True
+                (0.41)  (0.59)
+===============================
+FG
+  mean          -0.7085  0.4755
+  std. dev.      2.1202  2.1116
+  weight sum        575     841
+  precision      0.1276  0.1276
+
+FGA
+  mean          -0.0941  0.0618
+  std. dev.      2.9054  2.9532
+  weight sum        575     841
+  precision      0.1333  0.1333
+
+FG%
+  mean           -0.008  0.0054
+  std. dev.      0.0217  0.0223
+  weight sum        575     841
+  precision        0.01    0.01
+
+3P
+  mean          -0.5004  0.3415
+  std. dev.      2.3797  2.4105
+  weight sum        575     841
+  precision      0.1351  0.1351
+
+3PA
+  mean          -0.7567   0.508
+  std. dev.      5.8934  6.0783
+  weight sum        575     841
+  precision       0.129   0.129
+
+3P%
+  mean          -0.0089  0.0061
+  std. dev.      0.0254  0.0257
+  weight sum        575     841
+  precision        0.01    0.01
+
+2P
+  mean          -0.2096  0.1354
+  std. dev.      2.8195  2.9312
+  weight sum        575     841
+  precision       0.103   0.103
+
+2PA
+  mean           0.6716 -0.4522
+  std. dev.      5.6475  5.7534
+  weight sum        575     841
+  precision      0.1217  0.1217
+
+2P%
+  mean           -0.009  0.0059
+  std. dev.      0.0249  0.0249
+  weight sum        575     841
+  precision        0.01    0.01
+
+FT
+  mean          -0.0253  0.0338
+  std. dev.      2.2003  2.1987
+  weight sum        575     841
+  precision      0.1127  0.1127
+
+FTA
+  mean           0.0931 -0.0498
+  std. dev.      3.1832  3.1173
+  weight sum        575     841
+  precision       0.119   0.119
+
+FT%
+  mean          -0.0046  0.0034
+  std. dev.      0.0494  0.0495
+  weight sum        575     841
+  precision        0.01    0.01
+
+ORB
+  mean           0.0379 -0.0232
+  std. dev.      1.5722  1.6071
+  weight sum        575     841
+  precision      0.1116  0.1116
+
+DRB
+  mean          -0.6188  0.4227
+  std. dev.      1.7796  1.7771
+  weight sum        575     841
+  precision      0.1213  0.1213
+
+TRB
+  mean          -0.5843  0.4025
+  std. dev.      2.3977  2.3983
+  weight sum        575     841
+  precision      0.1194  0.1194
+
+AST
+  mean          -0.7168    0.47
+  std. dev.      3.1712  3.1848
+  weight sum        575     841
+  precision      0.1453  0.1453
+
+STL
+  mean          -0.0641  0.0401
+  std. dev.      1.4024  1.3827
+  weight sum        575     841
+  precision      0.1162  0.1162
+
+BLK
+  mean          -0.2134  0.1483
+  std. dev.       1.179  1.2171
+  weight sum        575     841
+  precision         0.1     0.1
+
+TOV
+  mean           0.2681 -0.1991
+  std. dev.      1.6756  1.6136
+  weight sum        575     841
+  precision       0.107   0.107
+
+PF
+  mean           0.2482 -0.1647
+  std. dev.      1.7288  1.7885
+  weight sum        575     841
+  precision      0.1156  0.1156
+
+PTS
+  mean          -1.9395  1.3234
+  std. dev.      5.1355  5.0966
+  weight sum        575     841
+  precision      0.1492  0.1492
+
+W
+  mean         -10.1187  7.0137
+  std. dev.     17.6206 17.5815
+  weight sum        575     841
+  precision      1.2353  1.2353
 
 
-Time taken to build model: 0.02 seconds
+
+Time taken to build model: 0.01 seconds
 
 === Evaluation on test set ===
 
@@ -73,24 +179,24 @@ Time taken to test model on supplied test set: 0 seconds
 
 === Summary ===
 
-Correctly Classified Instances          13               86.6667 %
-Incorrectly Classified Instances         2               13.3333 %
-Kappa statistic                          0.4444
-Mean absolute error                      0.2359
-Root mean squared error                  0.3785
-Relative absolute error                 53.1587 %
-Root relative squared error             84.1046 %
+Correctly Classified Instances          12               80      %
+Incorrectly Classified Instances         3               20      %
+Kappa statistic                          0     
+Mean absolute error                      0.2654
+Root mean squared error                  0.4191
+Relative absolute error                 59.822  %
+Root relative squared error             93.1266 %
 Total Number of Instances               15     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.333    0.000    1.000      0.333    0.500      0.535    0.694     0.583     False
-                 1.000    0.667    0.857      1.000    0.923      0.535    0.694     0.897     True
-Weighted Avg.    0.867    0.533    0.886      0.867    0.838      0.535    0.694     0.834     
+                 0.000    0.000    ?          0.000    ?          ?        0.583     0.306     False
+                 1.000    1.000    0.800      1.000    0.889      ?        0.583     0.874     True
+Weighted Avg.    0.800    0.800    ?          0.800    ?          ?        0.583     0.761     
 
 === Confusion Matrix ===
 
   a  b   <-- classified as
-  1  2 |  a = False
+  0  3 |  a = False
   0 12 |  b = True
